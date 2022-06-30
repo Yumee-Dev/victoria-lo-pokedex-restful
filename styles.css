@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.berry-tile {
+  border: 4px solid transparent;
+  border-radius: 16px;
+  transition: border 0.5s;
+}
+
+.berry-tile.selected {
+  border: 4px solid blue;
+}
+
+.berry-tile * {
+  pointer-events: none;
+}
+
+.firmness {
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+.firmness.very-soft {
+  background-color: #e0b99b;
+}
+
+.firmness.soft {
+  background-color: #bf9371;
+}
+
+.firmness.hard {
+  background-color: #856349;
+}
+
+.firmness.very-hard {
+  background-color: #543c29;
+}
+
+.firmness.super-hard {
+  background-color: #26190f;
+}
+
+.spinner-box {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.circle-border {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(0deg, black, white, black, white);
+  animation: spin 0.8s linear 0s infinite;
+}
+
+.circle-core {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
